@@ -1,0 +1,21 @@
+@using Persistence;
+@model Item
+
+@{  
+    ViewBag.Title = "Item Details"; 
+    var item = (Item)ViewData["Item"];
+    string msg = (string)TempData["msg"];
+}
+
+<h2>Item Details</h2>
+@if(item == null) {
+    <h3>@msg</h3>
+}else{
+<ul>
+    <li>Item ID: @item.ItemId</li>
+    <li>Item Name: @item.ItemName</li>
+    <li>Unit Price: @item.ItemPrice</li>
+    <li>Amount: @item.Amount</li>
+    <li>Description: @item.Description</li>
+</ul>
+}

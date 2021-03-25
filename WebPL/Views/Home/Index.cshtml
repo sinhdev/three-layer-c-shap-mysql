@@ -1,0 +1,29 @@
+@using System.Collections.Generic;
+@using Persistence;
+@using BL;
+@model Item
+@{  
+    ViewBag.Title = "Item Management";  
+    ItemBL ibl = new ItemBL();
+    var allItems = ibl.GetAll();
+}
+<div>
+<h2>Item Management</h2>
+<table border="1">
+    <tr>
+        <th>Item Id</th>
+        <th>Item Name</th>
+        <th>Unit Price</th>
+        <th>Amount</th>
+    </tr>
+    @foreach (var item in allItems) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ItemId)</td>
+            <td>@Html.DisplayFor(modelItem => item.ItemName)</td>
+            <td>@Html.DisplayFor(modelItem => item.ItemPrice)</td>
+            <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+            <td>@Html.ActionLink("Details", "Details", new { id=item.ItemId })</td>
+        </tr>
+    }
+</table>
+</div>

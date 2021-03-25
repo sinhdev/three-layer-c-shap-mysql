@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{81B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolePL", "ConsolePL\ConsolePL.csproj", "{62E44742-A710-458A-BBA8-711C67A139D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPL", "WebPL\WebPL.csproj", "{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{62E44742-A710-458A-BBA8-711C67A139D1}.Release|x64.Build.0 = Release|Any CPU
 		{62E44742-A710-458A-BBA8-711C67A139D1}.Release|x86.ActiveCfg = Release|Any CPU
 		{62E44742-A710-458A-BBA8-711C67A139D1}.Release|x86.Build.0 = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|x64.Build.0 = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Debug|x86.Build.0 = Debug|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|x64.ActiveCfg = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|x64.Build.0 = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|x86.ActiveCfg = Release|Any CPU
+		{1685B1B4-9A1A-4F43-9DAB-2B60B9519D94}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
