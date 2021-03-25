@@ -10,6 +10,11 @@ namespace DAL
         private string query;
         private MySqlConnection connection = DbConfiguration.OpenConnection();
         private MySqlDataReader reader;
+        public CustomerDAL(){
+            if(connection==null){
+                connection = DBHelper.GetConnection();
+            }
+        }
         public Customer GetById(int customerId)
         {
             if(connection.State == System.Data.ConnectionState.Closed){
