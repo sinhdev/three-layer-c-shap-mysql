@@ -1,1 +1,1 @@
-server=localhost;user id=vtca;password=vtcacademy;port=3306;database=OrderDB;SslMode=None
+server=localhost;user id=vtca;password=vtcacademy;port=3306;database=OrderDB;

@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 .DS_Store
+
+#VS Code
+*.vscode
