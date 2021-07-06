@@ -21,7 +21,7 @@ create table Items(
 
 create table Orders(
 	order_id int auto_increment primary key,
-    order_date datetime default now(),
+    order_date datetime default now() not null,
     customer_id int,
     order_status int,
     constraint fk_Orders_Customers foreign key(customer_id) references Customers(customer_id)

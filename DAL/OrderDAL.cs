@@ -9,6 +9,7 @@ namespace DAL
     {
         public bool CreateOrder(Order order)
         {
+            DBHelper.OpenConnection();
             if (order == null || order.ItemsList == null || order.ItemsList.Count == 0)
             {
                 return false;
