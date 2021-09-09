@@ -5,17 +5,13 @@ using System.IO;
 
 namespace DAL
 {
-    public class DbConfiguration
+    public class DbConfig
     {
-        private static string CONNECTION_STRING = "server=localhost;user id=vtca;password=vtcacademy;port=3306;database=OrderDB;SslMode=None";
-        private static string conString = null;
+        private static MySqlConnection connection = new MySqlConnection();
         public static MySqlConnection OpenDefaultConnection()
         {
             try{
-                MySqlConnection connection = new MySqlConnection
-                {
-                    ConnectionString = CONNECTION_STRING
-                };
+                connection.ConnectionString = "server=localhost;user id=vtca;password=vtcacademy;port=3306;database=OrderDB;";
                 connection.Open();
                 return connection;
             }catch{
@@ -26,13 +22,12 @@ namespace DAL
         public static MySqlConnection OpenConnection()
         {
             try{
-                if(conString == null){
-                    using (FileStream fileStream = File.OpenRead("ConnectionString.txt"))
+                string conString;
+                using (System.IO.FileStream fileStream = System.IO.File.OpenRead("DbConfig.txt"))
+                {
+                    using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
                     {
-                        using (StreamReader reader = new StreamReader(fileStream))
-                        {
-                            conString = reader.ReadLine();
-                        }
+                        conString = reader.ReadLine();
                     }
                 }
                 return OpenConnection(conString);
@@ -44,10 +39,7 @@ namespace DAL
         public static MySqlConnection OpenConnection(string connectionString)
         {
             try{
-                MySqlConnection connection = new MySqlConnection
-                {
-                    ConnectionString = connectionString
-                };
+                connection.ConnectionString = connectionString;
                 connection.Open();
                 return connection;
             }catch{
