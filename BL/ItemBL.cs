@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Persistence;
 using DAL;
 
@@ -7,11 +6,7 @@ namespace BL
 {
     public class ItemBL
     {
-        private ItemsDAL idal;
-        public ItemBL()
-        {
-            idal = new ItemsDAL();
-        }
+        private ItemDAL idal = new ItemDAL();
         public Item GetItemById(int itemId)
         {
             return idal.GetItemById(itemId);
