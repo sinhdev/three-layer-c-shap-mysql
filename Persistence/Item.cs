@@ -1,10 +1,5 @@
 ﻿namespace Persistence
 {
-  public static class ItemFilter
-  {
-    public const int GET_ALL = 0;
-    public const int FILTER_BY_ITEM_NAME = 1;
-  }
   public static class ItemStatus
   {
     public const int NOT_ACTIVE = 0;

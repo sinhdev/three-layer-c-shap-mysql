@@ -5,6 +5,11 @@ using Persistence;
 
 namespace DAL
 {
+  public static class ItemFilter
+  {
+    public const int GET_ALL = 0;
+    public const int FILTER_BY_ITEM_NAME = 1;
+  }
   public class ItemDAL
   {
     private string query;
