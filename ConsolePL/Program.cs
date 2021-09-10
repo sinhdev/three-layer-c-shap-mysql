@@ -72,12 +72,16 @@ namespace ConsolePL
                         break;
                     case 3:
                         Order order = new Order();
-                        order.OrderCustomer = new Customer { CustmerId = null, CustomerName = "Dao Van Duc", CustomerAddress = "Thai Binh" };
+                        //new customer
+                        //order.OrderCustomer = new Customer { CustmerId = null, CustomerName = "Nguyen Xuan Sinh", CustomerAddress = "Hanoi" };
+                        
+                        //exists customer
+                        order.OrderCustomer = new Customer { CustmerId = 1, CustomerName = "Nguyen Xuan Sinh", CustomerAddress = "Hanoi" };
+                        
                         order.ItemsList.Add(ibl.GetItemById(2));
                         order.ItemsList[0].Amount = 1;
                         order.ItemsList.Add(ibl.GetItemById(3));
                         order.ItemsList[1].Amount = 2;
-
                         Console.WriteLine("Create Order: " + (obl.CreateOrder(order) ? "completed!" : "not complete!"));
                         break;
                 }

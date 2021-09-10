@@ -51,6 +51,15 @@ namespace DAL
           else
           {
             //get Customer by Id
+            cmd.CommandText = "select * from Customers where customer_id=@customerId;";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@customerId", order.OrderCustomer.CustmerId);
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+              order.OrderCustomer = new CustomerDAL().GetCustomer(reader);
+            }
+            reader.Close();
           }
           if (order.OrderCustomer == null || order.OrderCustomer.CustmerId == null)
           {
