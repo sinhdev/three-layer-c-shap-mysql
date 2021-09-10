@@ -37,7 +37,7 @@ namespace DAL
       finally { connection.Close(); }
       return item;
     }
-    private Item GetItem(MySqlDataReader reader)
+    internal Item GetItem(MySqlDataReader reader)
     {
       Item item = new Item();
       item.ItemId = reader.GetInt32("item_id");
@@ -75,9 +75,7 @@ namespace DAL
         }
         reader.Close();
       }
-      catch(Exception ex) {
-        Console.WriteLine(ex);
-      }
+      catch { }
       finally
       {
         connection.Close();

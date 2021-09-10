@@ -10,9 +10,7 @@ namespace DAL
     private string query;
     private MySqlConnection connection = DbConfig.GetConnection();
     private MySqlDataReader reader;
-    public CustomerDAL()
-    {
-    }
+    public CustomerDAL() { }
     public Customer GetById(int customerId)
     {
       Customer c = null;
@@ -64,9 +62,7 @@ namespace DAL
         cmd.ExecuteNonQuery();
         result = (int)cmd.Parameters["@customerId"].Value;
       }
-      catch
-      {
-      }
+      catch { }
       finally
       {
         connection.Close();
