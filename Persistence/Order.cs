@@ -6,10 +6,8 @@ namespace Persistence
     public static class OrderStatus
     {
         public const int CREATE_NEW_ORDER = 1;
+        public const int ORDER_INPROGRESS = 2;
     }
-    // public enum OrderStatus{
-    //     CreateNewOrder, Inprocess, Cancel, Complete
-    // }
     public class Order
     {
         public int OrderId { set; get; }
