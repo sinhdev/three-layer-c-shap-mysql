@@ -90,8 +90,13 @@ namespace ConsolePL
 
         private static short Menu(string title, string[] menuItems)
         {
+            string logo = @"
+╔╦╗┬ ┬┬─┐┌─┐┌─┐  ╦  ┌─┐┬ ┬┌─┐┬─┐  ╔╦╗┌─┐┌┬┐┌─┐
+ ║ ├─┤├┬┘├┤ ├┤   ║  ├─┤└┬┘├┤ ├┬┘   ║║├┤ ││││ │
+ ╩ ┴ ┴┴└─└─┘└─┘  ╩═╝┴ ┴ ┴ └─┘┴└─  ═╩╝└─┘┴ ┴└─┘";
             short choose = 0;
-            string line = "========================================";
+            Console.WriteLine(logo);
+            string line = "==============================================";
             Console.WriteLine(line);
             Console.WriteLine(" " + title);
             Console.WriteLine(line);
