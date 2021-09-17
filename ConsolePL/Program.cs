@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
 using Persistence;
 using BL;
 
@@ -90,7 +90,7 @@ namespace ConsolePL
 
         private static short Menu(string title, string[] menuItems)
         {
-            string logo = @"
+            string logo = @"==============================================
 ╔╦╗┬ ┬┬─┐┌─┐┌─┐  ╦  ┌─┐┬ ┬┌─┐┬─┐  ╔╦╗┌─┐┌┬┐┌─┐
  ║ ├─┤├┬┘├┤ ├┤   ║  ├─┤└┬┘├┤ ├┬┘   ║║├┤ ││││ │
  ╩ ┴ ┴┴└─└─┘└─┘  ╩═╝┴ ┴ ┴ └─┘┴└─  ═╩╝└─┘┴ ┴└─┘";
